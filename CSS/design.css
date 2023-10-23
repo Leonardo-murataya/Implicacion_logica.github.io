@@ -319,9 +319,15 @@
   #generador {
 	margin-bottom: 50px;
   }
-  /* Estilos para dispositivos móviles */
+/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-	body {
-	  font-size: 14px;
-	}
+    body {
+      font-size: 14px;
+    }
+    
+    #generador {
+        margin-bottom: 30px; /* ajusta el margen inferior para dispositivos móviles */
+    }
+    
+    /* Agrega estilos adicionales para dispositivos móviles aquí */
 }
