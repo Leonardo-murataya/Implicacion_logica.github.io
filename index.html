@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="CSS/design.css">
+	<title>MATEMÁTICAS</title>
+</head>
+<body>
+	<div id="botones">
+		<button id="b_back" class="back">back</button><!--Boton para regresar "diapositiva"-->
+		<button id="b_next" class="next">next</button><!--Boton para avanzar "diapositiva"-->
+	</div>
+
+	<!--INICIO DIAPOSITIVA 1-->
+	<div id="panel1">
+		<header id="cabecera">
+		<!-- Here there information about our us-->
+		<h1 class="titulo_index">Implicación Lógica</h1>
+		<h2>Integrantes</h2>
+			<ul id="ul_contenedor">
+				<li><img class="imagen" src="img/p_angel.jpg"/><br/><p class="texto">Jimenez Sandoval Angel Arafat</p></li>
+				<li><img class="imagen" src="img/p_leonardo.jpg"/><br/><p class="texto">Murataya Moreno Bryan Leonardo</p></li>
+				<li><img class="imagen" src="img/p_jonathan.jpg"/><br/><p class="texto">Torres Castellanos Jonathan Gerardo</p></li>
+				<li><img class="imagen" src="img/p_alberto.jpg"/><br/><p class="texto">Vazquez Figueroa Alberto</p></li>
+			</ul>
+
+		</header>
+	</div>
+	<!--FIN DIAPOSITIVA 1-->
+	
+	<!--INICIO DIAPOSITIVA 2-->
+	<div id="panel2">
+		<h2>¿Qué es?</h2>
+		<p>
+			La implicación lógica es una afirmación hipotética que a su vez también puede ser interpretado como un condicional.
+			<br/><br/>
+			Cuando es interpretado como condicional, se lee "entonces" como conector de dos variables y/o casos.
+			<br/><br/>
+			Cuando es interpretado como implicación, se lee "por lo tanto" como conector de dos variables y/o casos.
+			<br/><br/>
+			Al momento de representarlo en tablas de verdad se pueden usar los símbolos => o ->. En las tablas de verdad ambos símbolos significa lo mismo, pero en el predicado se diferencia por sus dos conectores mencionados anteriormente.
+		</p>
+	</div>
+	<!--FIN DIAPOSITIVA 2-->
+
+	<!--INICIO DIAPOSITIVA 3-->
+	<div id="panel3">
+		<h2>¿Cómo funciona?</h2>
+		<table class="t_imp" border="solid,4px"><!--INICIO TABLA DE EJEMPLO-->
+			<tr>
+				<td>p</td>
+				<td>q</td>
+				<td>p->q</td>
+			</tr>
+			<tr>
+				<td>V</td>
+				<td>V</td>
+				<td>V</td>
+			</tr>
+			<tr>
+				<td>V</td>
+				<td>F</td>
+				<td>F</td>
+			</tr>
+			<tr>
+				<td>F</td>
+				<td>V</td>
+				<td>V</td>
+			</tr>
+			<tr>
+				<td>F</td>
+				<td>F</td>
+				<td>V</td>
+			</tr>
+		</table><!--FIN TABLA DE EJEMPLO-->
+
+		<p>
+			En la tabla de verdad se pueden evaluar varios parámetros, en este caso de esta evaluando dos.<br/><br/>
+			El acomodo sería de manera convencional, en la primera columna sería llenando las primeras dos filas con valores verdaderas <b><i>V</i></b> y las siguientes dos filas se llenan con valores falsas <b><i>F</i></b>.<br/><br/>
+			En la segunda columna para colocar los valores de <i>q</i>, es poniendo valores alternandos en cada una de las siguientes filas, es decir, <b><i>V</i></b>, <b><i>F</i></b>, <b><i>V</i></b>, <b><i>F</i></b>.<br/><br/>
+			En la tercera columna se pondrá el resultados de las dos proposiciones, la regla nos dice que únicamente será falso si la segunda proposición es falsa, las demás serán verdaderas.<br/>
+		</p>
+		<br/><br/>
+			<form class="formulario"><!--TABLA DE IMPLICACIÓN-->
+				<fieldset>
+					<legend>Generador de implicación</legend>
+					<label for="condicion">X:</label>
+					<select id="opciones">
+						<option value="1">></option>
+						<option value="2">%</option>
+					</select>
+					<input id="c_1" type="text" placeholder="0" /><label> y </label><input id="c_2" type="text" placeholder="0">
+					<br/><br/>
+					<label for="variable">Valor de X:</label>
+					<input id="variable" type="text" placeholder="3" />
+					<input type="button" value="Ejectuar" onclick="implicacion()"/><br>
+					<label id="resultado">Esperando respuesta...</label><br/><br/>
+				</fieldset>
+			</form><!--FIN TABLA DE IMPLICACIÓN-->
+	</div>
+	<!--FIN DIAPOSITIVA 3-->
+
+	<!--INICIO DIAPOSITIVA 4-->
+	<div id="panel4">
+		<h2>Ejemplos</h2>
+		<div class="nota">
+		<h3>Recordemos que:</h3>
+		<p>
+			Una hipótesis verdadera ⇒ Un resultado verdadero. Esto es Verdadero.
+		</p>
+		<p>
+			Una hipótesis verdadera ⇒ Un resultado falso. Esto es Falso.
+		</p>
+		<p>
+			Una hipótesis falsa ⇒ Un resultado verdadero. Esto es Verdadero.
+		</p>
+		<p>
+			Una hipótesis falsa ⇒ Un resultado falso. Esto es Verdadero.
+		</p>
+		</div>
+		<br/>
+		<div>
+			<h3>Ejemplo 1</h3>
+			<p>
+				Sean las proposiciones p: "El cielo es azul" y q: "El sol es amarillo".<br/>
+				La implicación lógica de p->q se lee "Si el cielo es azul, entonces el sol es amarillo".<br/>
+				En este caso, el cielo es azul y el sol es amarillo, por lo tanto, la implicación lógica es verdadera.
+			</p>
+			<br/>
+			<h3>Ejemplo 2</h3>
+			<p>
+				Sean las proposicones p: "La Tierra es redonda" y q: "Cristobal Colón descubrió América". <br/>
+				La implicación lógica de p->q  se lee "Si la Tierra es redonda, entonces Cristobal <br/>
+				Colón descubrió América".<br/>En este caso la tierra es redonda y Cristobal Colón descubrió America, por lo tanto, la implicación lógica es verdadera.
+			</p>
+			<br/>
+			<h3>Ejemplo 3</h3>
+			<p>
+				Sean las proposiciones p: "Hay demasiadas nubes en el cielo" y q: "El día estará soleado".<br/>
+				La implicación lógica de p->q se lee "Si hay demasiadas nubes en el cielo, entonces el día no estará soleado."<br/>
+				En este caso, hay demasiadas nubes en el cielo y el día estará soleado, por lo tanto, la implicación lógica es falsa.
+			</p>
+			<br/>
+			<h3>Ejemplo 4</h3>
+			<p>
+				Sean las proposiciones p: "La suma de los ángulos internos de un triángulo es de 160°" y q: "Los triángulos tienen 3 lados".<br/>
+				La implicación lógica de p->q se lee "Si la suma de los ánuglos internos de un triángulo no es de 160°, entonces los<br/>
+				triángulos tienen 3 lados".<br/>
+				En este caso, la suma de los ángulos internos de un trángulo no es de 160° y los triángulos tienen 3 lados, por lo tanto, <br/>
+				la implicación lógica es verdadera.
+			</p>
+			<br/>
+			<h3>Ejemplo 5</h3>
+			<p>
+				Sean las proposiciones p: "9 es un número primo" y q: "6 es un número primo".<br/>
+				La implicación lógica de p->q se lee "Si 9 no es un número primo, entonces 6 no es un número primo".<br/>
+				En este caso, 9 no es un número primo y el 6 no es un número primo, por lo tanto, la implicación lógica es verdadera. <br/>
+			</p>
+			<br/>
+			<h3>Ejemplo 6</h3>
+			<p>
+				Sean las proposiciones p: "La Tierra es el tercer planeta del sistema Solar" y q: "Venus es el séptimo planeta del sistema solar".<br/>
+				La implicación lógica de p->q se lee "Si la Tierra es el tercer planeta del sistema Solar, Venus no es el séptimo planeta".<br/>
+				En este caso, la Tierra es el tercer planeta del sistema Solar y Venus no es el séptimo planeta del sistema solar, por lo tanto,<br/>
+				la implicación lógica es falsa. <br/>
+			</p>
+			<br/>
+			<h3>Ejemplo 7</h3>
+			<p>
+				Sean las proposiciones p: "La raíz cúbica de 343 es 7" y q: "7 al cubo es 343".<br/>
+				La implicación lógica de p->q se lee: <br/>
+				En este caso, la implicación lógica es: <br/><!--Verdadero-->
+			</p>
+			<br/>
+			<h3>Ejemplo 8</h3>
+			<p>
+				Sean las proposiciones p: "9,999 + 101 = 10,100" y q: "699 + 101 = 900".<br/>
+				La implicación lógica de p->q se lee: <br/>
+				En este caso, la implicación lógica es: <br/><!--Falso-->
+			</p>
+			<br/>
+			<h3>Ejemplo 9</h3>
+			<p>
+				Sean las proposiciones p: "Java es un lenguaje de programción" y q: "HTML es un lenguaje de programación".<br/>
+				La implicación lógica de p-> ~q se lee: <br/>
+				En este caso, la implicación lógica es: <br/><!--Verdadera-->
+			</p>
+		</div>
+	</div>
+	<!--FIN DIAPOSITIVA 4-->
+
+	<!--INICIO FOOTER-->
+	<footer>
+		<blockquote>Todos los derechos reservados 2023-2027</blockquote>
+	</footer>
+	<!--FIN FOOTER-->
+	<script type="text/javascript" src="js/prueba.js"></script>
+	<script id="panel4" type="text/javascript" src="js/exercise.js"></script>
+</body>
+</html>
